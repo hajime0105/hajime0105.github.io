@@ -1,8 +1,17 @@
 ---
 layout: default
-title: test
+title: Main Page
 description: metaタグで見れる
 ---
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 <body>
   <h1>文字の大きさ h1</h1>
   <h2>文字の大きさ h2</h2>
